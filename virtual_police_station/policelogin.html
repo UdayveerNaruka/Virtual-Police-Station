@@ -15,7 +15,7 @@ h2 {
   text-align: center;
   font-size: 250%;
 }
-input[type=number], input[type=password] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -45,8 +45,6 @@ button:hover {
   background-color: #f44336;
 }
 
-
-
 .container {
   padding: 16px;
 }
@@ -54,6 +52,9 @@ button:hover {
 span.psw {
   float: right;
   padding-top: 16px;
+}
+#police{
+  color: blue;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -73,12 +74,13 @@ span.psw {
 </head>
 <body>
 
-<h2>Login Form</h2>
+<h2><span id="police">Police</span> Login Form</h2>
 
 <form action="/" method="post">
+
   <div class="container">
-    <label for="aadhar-no"><b>Aadhaar Number</b></label>
-    <input type="number" placeholder="Enter Aadhaar Number" name="aadhar-no" required>
+    <label for="station-name"><b>Station ID</b></label>
+    <input type="text" placeholder="Enter Station Name" name="station-name" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
@@ -94,5 +96,4 @@ span.psw {
 </form>
 
 </body>
-
 </html>

@@ -14,6 +14,7 @@ input[type=text],input[type=number],input[type=date],input[type=datetime-local],
   border-radius: 4px;
   resize: vertical;
 }
+
 input[type=date],input[type=datetime-local]{
     resize: none;
 }
@@ -65,6 +66,15 @@ input[type=submit]:hover {
   display: table;
   clear: both;
 }
+h2{
+    color: #4CAF50;;
+}
+h1{
+    color: blue;
+}
+.error{
+    color: red;
+}
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -77,26 +87,32 @@ input[type=submit]:hover {
 </head>
 <body>
 
-    <h2>FIR Form</h2>
+    <h1>FIR Form</h1>
     <p></p>
 
     <div class="container">
-        <h2>Victem Details</h2>
+        <h2>Victim Details</h2>
         <div action="/">
             <div class="row">
                 <div class="col-25">
                     <label for="name">Name</label>
                 </div>
                 <div class="col-75">
-                        <input type="text" id="name" name="name" placeholder="Enter Name">
+                        <input type="text" id="name" name="name" placeholder="Enter Name" required>
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-25">
-                    <label for="fname">Father's Name</label>
+                    <label for="gender">Gender</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="fname" name="fname" placeholder="Enter Father's Name">
+                    <input type="radio" name="gender" value="male" default > Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                    
+                    <div class="error">
+                    </div>
                 </div>
             </div>
 
@@ -109,6 +125,8 @@ input[type=submit]:hover {
                 </div>
             </div>
 
+            
+
             <div class="row">
                 <div class="col-25">
                     <label for="address">Address</label>
@@ -118,6 +136,15 @@ input[type=submit]:hover {
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Father's Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="fname" placeholder="Enter Father's Name">
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="col-25">
                     <label for="pincode">Pin Code</label>
@@ -138,7 +165,7 @@ input[type=submit]:hover {
     </div>
 
 
-    <div class="container">  
+    <div class="container2">  
         <h2>Crime Details</h2>
         <div class="row">
             <div class="col-25">
@@ -154,18 +181,44 @@ input[type=submit]:hover {
             </div>
             <div class="col-75">
                 <select id="offence" name="offence">
-                <option value="semple 1 ">semple 1</option>
-                <option value="semple 2">semple 2</option>
-                <option value="semple 3">semple 3</option>
+                <option value="arms-act">Arms Act</option>
+                <option value="attempts-to-murder">Attempts to Murder</option>
+                <option value="blackmail">Blackmail</option>
+                <option value="burgler">Burgler</option>
+                <option value="chain-snatching">Chain Snatching</option>
+                <option value="cheating">Cheatinig</option>
+                <option value="communal-riot-act">Communal Riot Act</option>
+                <option value="criminal-law-abondonment-act">Criminal law Abondonment Act</option>
+                <option value="dacoity">Dacoity</option>
+                <option value="domestic-violence">Domestic Violence</option>
+                <option value="essential-commodity">Essential Commodity</option>
+                <option value="eve-teasing">Eve Teasing</option>
+                <option value="explosive-act">Explosive Act</option>
+                <option value="extortion">Extortion</option>
+                <option value="fraud">Fraud</option>
+                <option value="immoral-traffic-act">Immoral Traffic Act</option>
+                <option value="indian-foreigners-act">Indian Foreigners Act</option>
+                <option value="Kidnapping">Kidnapping</option>
+                <option value="loot">Loot</option>
+                <option value="missing">Missing</option>
+                <option value="murder">Murder</option>
+                <option value="offence-against-state">Offence Against State</option>
+                <option value="other">Other</option>
+                <option value="rape">Rape</option>
+                <option value="rioting">Rioting</option>
+                <option value="robbery">Robbery</option>
+                <option value="sneaking">Sneaking</option>
+                <option value="theft">theft</option>
+                <option value="women-cruelty">Women women-cruelty</option>
                 </select>
             </div>
         </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="criminal-details">Criminal Details</label>
+                    <label for="details">Details</label>
                 </div>
                 <div class="col-75">
-                    <textarea id="criminal-details" name="criminal-details" placeholder="Enter Criminal details" style="height:200px"></textarea>
+                    <textarea id="details" name="details" placeholder="Enter offence details" style="height:200px"></textarea>
                 </div>
             </div>
             <div class="row">
@@ -175,4 +228,7 @@ input[type=submit]:hover {
     </div>
 
 </body>
+<script>
+    //radio button ki javascript karni ha 
+</script>
 </html>
